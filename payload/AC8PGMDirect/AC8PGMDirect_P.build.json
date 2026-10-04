@@ -1,0 +1,699 @@
+{
+  "tool": "AC8AssetPatcher",
+  "property": "HomingForesightAmount",
+  "config": "config.json",
+  "package": "AC8PGMDirect_P.utoc",
+  "createdUtc": "2026-10-03T12:19:30.3726932+00:00",
+  "assets": [
+    {
+      "side": "player",
+      "type": "msl",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_a0"
+    },
+    {
+      "side": "player",
+      "type": "msl",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_a1"
+    },
+    {
+      "side": "player",
+      "type": "msl",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_f0"
+    },
+    {
+      "side": "player",
+      "type": "msl",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_j0"
+    },
+    {
+      "side": "player",
+      "type": "msl",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_r0"
+    },
+    {
+      "side": "player",
+      "type": "2aam",
+      "value": 0.95,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/2aam/BP_plwp_2aam_a0"
+    },
+    {
+      "side": "player",
+      "type": "4aam",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/4aam/BP_plwp_4aam_a0"
+    },
+    {
+      "side": "player",
+      "type": "4aam",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/4aam/BP_plwp_4aam_f0"
+    },
+    {
+      "side": "player",
+      "type": "6aam",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/6aam/BP_plwp_6aam_a0"
+    },
+    {
+      "side": "player",
+      "type": "6aam",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/6aam/BP_plwp_6aam_r0"
+    },
+    {
+      "side": "player",
+      "type": "hcaa",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_a0"
+    },
+    {
+      "side": "player",
+      "type": "hcaa",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_f0"
+    },
+    {
+      "side": "player",
+      "type": "hcaa",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_j0"
+    },
+    {
+      "side": "player",
+      "type": "hcaa",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_r0"
+    },
+    {
+      "side": "player",
+      "type": "hcaa",
+      "value": 0.8,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_r1"
+    },
+    {
+      "side": "player",
+      "type": "hpaa",
+      "value": 0.75,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hpaa/BP_plwp_hpaa_a0"
+    },
+    {
+      "side": "player",
+      "type": "hpaa",
+      "value": 0.75,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hpaa/BP_plwp_hpaa_j0"
+    },
+    {
+      "side": "player",
+      "type": "hpaa",
+      "value": 0.75,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hpaa/BP_plwp_hpaa_r0"
+    },
+    {
+      "side": "player",
+      "type": "hvaa",
+      "value": 0.85,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hvaa/BP_plwp_hvaa_a0"
+    },
+    {
+      "side": "player",
+      "type": "hvaa",
+      "value": 0.85,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hvaa/BP_plwp_hvaa_r0"
+    },
+    {
+      "side": "player",
+      "type": "laam",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Laam/BP_plwp_laam_a0"
+    },
+    {
+      "side": "player",
+      "type": "laam",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Laam/BP_plwp_laam_e0"
+    },
+    {
+      "side": "player",
+      "type": "laam",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Laam/BP_plwp_laam_r0"
+    },
+    {
+      "side": "player",
+      "type": "qaam",
+      "value": 1,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Qaam/BP_plwp_qaam_a0"
+    },
+    {
+      "side": "player",
+      "type": "qaam",
+      "value": 1,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Qaam/BP_plwp_qaam_r0"
+    },
+    {
+      "side": "player",
+      "type": "saam",
+      "value": 0.95,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Saam/BP_plwp_saam_a0"
+    },
+    {
+      "side": "player",
+      "type": "saam",
+      "value": 0.95,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Saam/BP_plwp_saam_r0"
+    },
+    {
+      "side": "player",
+      "type": "saam",
+      "value": 0.95,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Saam/BP_plwp_saam_r1"
+    },
+    {
+      "side": "player",
+      "type": "sasm",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Sasm/BP_plwp_sasm_a0"
+    },
+    {
+      "side": "player",
+      "type": "sasm",
+      "value": 0.9,
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Sasm/BP_plwp_sasm_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "2aam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/2aam/BP_wp_2aam_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "4aam",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/4aam/BP_wp_4aam_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "4aam",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/4aam/BP_wp_4aam_f0"
+    },
+    {
+      "side": "enemy",
+      "type": "6aam",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/6aam/BP_wp_6aam_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "6aam",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/6aam/BP_wp_6aam_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "8aam",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "8aam",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "hcaa",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "hcaa",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_f0"
+    },
+    {
+      "side": "enemy",
+      "type": "hcaa",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_j0"
+    },
+    {
+      "side": "enemy",
+      "type": "hcaa",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "hpaa",
+      "value": 0.2,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hpaa/BP_wp_hpaa_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "hpaa",
+      "value": 0.2,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hpaa/BP_wp_hpaa_j0"
+    },
+    {
+      "side": "enemy",
+      "type": "hpaa",
+      "value": 0.2,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hpaa/BP_wp_hpaa_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "hvaa",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hvaa/BP_wp_hvaa_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "hvaa",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hvaa/BP_wp_hvaa_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "laam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Laam/BP_wp_laam_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "laam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Laam/BP_wp_laam_e0"
+    },
+    {
+      "side": "enemy",
+      "type": "laam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Laam/BP_wp_laam_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_a1"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_f0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_j0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_s0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Toplak"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_a1"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_f0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_j0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "msl",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_s0"
+    },
+    {
+      "side": "enemy",
+      "type": "qaam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Qaam/BP_wp_qaam_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "qaam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Qaam/BP_wp_qaam_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "saam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Saam/BP_wp_saam_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "saam",
+      "value": 0.3,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Saam/BP_wp_saam_r0"
+    },
+    {
+      "side": "enemy",
+      "type": "sasm",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Sasm/BP_wp_sasm_a0"
+    },
+    {
+      "side": "enemy",
+      "type": "sasm",
+      "value": 0.25,
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Sasm/BP_wp_sasm_r0"
+    }
+  ],
+  "payloads": [
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_a0",
+      "payloadSha256": "7A9B3129C4BB377DE2F1284CE1A1D90A5EFB4C70410031747F0F7596D3C638A0"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_a1",
+      "payloadSha256": "8B1312E2AF7A1793A174D047DCFCDAE438C9C40CF92ECFA0DFCA2170EC7C8831"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_f0",
+      "payloadSha256": "DD85AEA465017EFA989E3049E878FEF4C0D15F8338217D844F7F02A4D55B6E8B"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_j0",
+      "payloadSha256": "472EA3A19F8145FD26597F0D63170172ECA84321E79E9AD40CE403677D85CF5B"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Msl/BP_plwp_msl_r0",
+      "payloadSha256": "798DF52D770DB79DAB7A87DC3FD192E92E280E7D60DDC121D366326306BF04FF"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/2aam/BP_plwp_2aam_a0",
+      "payloadSha256": "054467C323A241A200CA68E84892AF7981B62A9FC68B0366F1E08BF93E384351"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/4aam/BP_plwp_4aam_a0",
+      "payloadSha256": "F84897662297923991A133F5189D394245629FD5DCF3738FC55DB2AA8EECB6E7"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/4aam/BP_plwp_4aam_f0",
+      "payloadSha256": "3C808CA941E61B0F4BCBC5DFDA9F84A33B5CE493F27AE350552A0E22602E859C"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/6aam/BP_plwp_6aam_a0",
+      "payloadSha256": "7314DE8058CFB9D2B4E41DE0D585090BBD27C08389623C434F92B43FF630011A"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/6aam/BP_plwp_6aam_r0",
+      "payloadSha256": "7179F1498882C1BCA58492C8D205AA63DE2C121AC9FEE668D40EC0C1AA4044E0"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_a0",
+      "payloadSha256": "B6EE28DE2B559DFEEB8F33BC98520BD71A6E913420AA19883DF103075EBC0289"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_f0",
+      "payloadSha256": "872126066D5579B3946C22BAFA9FE9774A457C9D560194E48E3A20796AC88BE6"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_j0",
+      "payloadSha256": "597217230B455D12F870F3E6E6B6DDE280F771E70FDDCAAD30540893587AB0C4"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_r0",
+      "payloadSha256": "F4D4A295063771A6FA66A5FBEA2F2FC8C60C29E163D33CBC257D992FFCB6042D"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hcaa/BP_plwp_hcaa_r1",
+      "payloadSha256": "7A26519B53A190B92AD0D80465CA3181BAAECD5DDE77D84160FF5F8C7F5B0E8A"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hpaa/BP_plwp_hpaa_a0",
+      "payloadSha256": "41FFEEED613D23EB719F0AF19A1015D10CA18039E415FB875E3391554A741A74"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hpaa/BP_plwp_hpaa_j0",
+      "payloadSha256": "71531AB82F804F47487ACAB58E7AC23CBBAF3755CF071F6C35EB355119DFF410"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hpaa/BP_plwp_hpaa_r0",
+      "payloadSha256": "B4B158E70B01E055B917B414A17584883445FDB6CDC1C0E100B7E56A1D481CDE"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hvaa/BP_plwp_hvaa_a0",
+      "payloadSha256": "4375C07BE5C128C6C1CDF50B8E233728DEF0D7AB3941A77DC0CC517935A9442E"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Hvaa/BP_plwp_hvaa_r0",
+      "payloadSha256": "7E01E9611F1891E3F9A0057B689318145111C440FAF062AA5CD228C6670AC7B2"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Laam/BP_plwp_laam_a0",
+      "payloadSha256": "9C006C96362ECAE7E0F4CB9C687203F4ECED49FCB7BA398D9FC2C193C7313899"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Laam/BP_plwp_laam_e0",
+      "payloadSha256": "D4C3C250ECF9A16CFFBC3AAFF72AF38618F03D6CB4D3579ECB4D82709DB6C221"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Laam/BP_plwp_laam_r0",
+      "payloadSha256": "8B64B91BED85DB25143A3B8E54B21ACA8D5146B71E875440C6A19418303F9E82"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Qaam/BP_plwp_qaam_a0",
+      "payloadSha256": "1D5174467E8EDDE0331B0E395E765279009308CABBD96E7B09EF3F50B4319340"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Qaam/BP_plwp_qaam_r0",
+      "payloadSha256": "A3BE3B36F8FDBEEC0B0DBF0719894C2D97CC408897A604A18D1CF01C58BC8637"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Saam/BP_plwp_saam_a0",
+      "payloadSha256": "F9EAFEAC8A3A1CBD3A70D15461747B61B1BACB015B7C223C82390EA5D66D26B2"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Saam/BP_plwp_saam_r0",
+      "payloadSha256": "AD9B77613BB1919FFCEA329590A180F9B0A034021B6BF3B6BF2608B3A6FAABC7"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Saam/BP_plwp_saam_r1",
+      "payloadSha256": "CEBA18871C5A580027C9BF795CE5E7C3CDDCD7B7EAF3B3A966EE145088AB8B21"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Sasm/BP_plwp_sasm_a0",
+      "payloadSha256": "6C3D2DD527E002A4D761015558626864A00DF8824DF73DB75594CF58B13D1147"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/Player/Sasm/BP_plwp_sasm_r0",
+      "payloadSha256": "90B554CAB0BB83086F9803FE11EB25EB920FD65DB5C2A840F7A7354C13C79C54"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/2aam/BP_wp_2aam_a0",
+      "payloadSha256": "3A082AFCDDAF648BEEF310F1087E09CB2EF4382F08510FE0AC12E3DB30F5696A"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/4aam/BP_wp_4aam_a0",
+      "payloadSha256": "70A39C19EBE750ECC6CF388A34446D62624FB6BD71AB6C1712008DB4951420A2"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/4aam/BP_wp_4aam_f0",
+      "payloadSha256": "509A5FA586A78102091383F933D3473C1FC53C461C41B1BB85B70D2942874824"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/6aam/BP_wp_6aam_a0",
+      "payloadSha256": "886268C0EE9EFBF5B469FDA9B016DB03AC952E2F646E8FABA4247D6D65E45F84"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/6aam/BP_wp_6aam_r0",
+      "payloadSha256": "5E3A4FF104216A22F017DF7B573F208B29E89C39D5FC6155CBC2A98F991F0146"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_a0",
+      "payloadSha256": "7BA2AABF57E884861C97FFC7093973ABAA298193D85661661DA7F1DB530CA997"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/8aam/BP_wp_8aam_r0",
+      "payloadSha256": "E1F739A01F992A61AB243B49FFF4D5C78E47C5CB610DA8D05C574213E2F54DCE"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_a0",
+      "payloadSha256": "86E4F2B71640306825C94ED115D9151EDE24205027C6223E5E3606992427E324"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_f0",
+      "payloadSha256": "0A8388578BB36F6DF4C4E9BD67FB2592217B30BC06F6D344D9C28533C02E78BE"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_j0",
+      "payloadSha256": "5E3A4FF104216A22F017DF7B573F208B29E89C39D5FC6155CBC2A98F991F0146"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hcaa/BP_wp_hcaa_r0",
+      "payloadSha256": "5E3A4FF104216A22F017DF7B573F208B29E89C39D5FC6155CBC2A98F991F0146"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hpaa/BP_wp_hpaa_a0",
+      "payloadSha256": "C89FEFC7EF78BA9CF30589262104ECB172D1C337C1DE5E03714648A8D039E55F"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hpaa/BP_wp_hpaa_j0",
+      "payloadSha256": "8A99DE556686480F22A833D16292113118D3D71F8EFABE8509E67EDDD6AE2D8F"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hpaa/BP_wp_hpaa_r0",
+      "payloadSha256": "45F9F7080B43744B1E82AD61C6B2D34864BEE1D7DD2DE453731869B977716258"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hvaa/BP_wp_hvaa_a0",
+      "payloadSha256": "4C0E68DB82341BEC5B24E4737DA29C3E33849E3F7FF31AF9CD78ADDD4CA7E83F"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Hvaa/BP_wp_hvaa_r0",
+      "payloadSha256": "BC2B80B8E2872730EAA68994B00AAC841CFC62A7668C6102E85E4AC7407502EA"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Laam/BP_wp_laam_a0",
+      "payloadSha256": "535DB14182FD7E8D4C5BE3F729E51DC1B5FC09E57383820259DF0E08E8348CBE"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Laam/BP_wp_laam_e0",
+      "payloadSha256": "E4017A3D4C6F67197179615F87C472E2292048064E7C7E4B251B619DF44DA8AA"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Laam/BP_wp_laam_r0",
+      "payloadSha256": "3B1AAF8A18503A94977AA88F1EAFA58FE98AF5CBA5DA8757EE9F2B47621BF8EB"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_a0",
+      "payloadSha256": "30187D5E09050B5AA6419C8E7E6716642288D3F8C0B953A1C2B09666552AE151"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_a1",
+      "payloadSha256": "FB9539D1C913908967371CFF13738759383832883FCC9EFC309C4A03C145F402"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_f0",
+      "payloadSha256": "9F6F5DBAAC73CB12A771EC135EBDE63D45C25084C2973CC7F361287FD77CE316"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_j0",
+      "payloadSha256": "0B443C93A773233AEAEAAF8F1B1F025CA71A0BE7951CC135FCBFC0EB6AA2F55F"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_r0",
+      "payloadSha256": "689DBAF12287EFB7D230136507853A4A5CB81944D30267122485CA4220410778"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Shadow_s0",
+      "payloadSha256": "DAC6E06E97ACE0DF679166FAC8FB47B341E995CCBE405CE8ADFDC093C965AD55"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_Toplak",
+      "payloadSha256": "689DBAF12287EFB7D230136507853A4A5CB81944D30267122485CA4220410778"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_a0",
+      "payloadSha256": "B16733BF184DCDEAC3A81B6CE0500B73368308B6E7E1AFFBFC204F9EFDE6ECBD"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_a1",
+      "payloadSha256": "FB9539D1C913908967371CFF13738759383832883FCC9EFC309C4A03C145F402"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_f0",
+      "payloadSha256": "9F6F5DBAAC73CB12A771EC135EBDE63D45C25084C2973CC7F361287FD77CE316"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_j0",
+      "payloadSha256": "0B443C93A773233AEAEAAF8F1B1F025CA71A0BE7951CC135FCBFC0EB6AA2F55F"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_r0",
+      "payloadSha256": "689DBAF12287EFB7D230136507853A4A5CB81944D30267122485CA4220410778"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Msl/BP_wp_msl_s0",
+      "payloadSha256": "DAC6E06E97ACE0DF679166FAC8FB47B341E995CCBE405CE8ADFDC093C965AD55"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Qaam/BP_wp_qaam_a0",
+      "payloadSha256": "EA28EBBE027C9EA824305B8FA151F08E3D2EAA5D313444F7748D45E72248D3A2"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Qaam/BP_wp_qaam_r0",
+      "payloadSha256": "C9D4F301487EEE4F00A31836C8AF10EF302ABBD7AED0C3203F2A00409C19D338"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Saam/BP_wp_saam_a0",
+      "payloadSha256": "D7BBCB95B8294C6104EEA835FCBE82F174FEADFBE64A7E183CCB1ED00E0CC5CE"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Saam/BP_wp_saam_r0",
+      "payloadSha256": "38F2AA6C75474DC76735B338CD0F88741987562984A6E52D64D37F0D161FA974"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Sasm/BP_wp_sasm_a0",
+      "payloadSha256": "73BD498C0D24B5753A45CEBBD755877DFEAEBC1C0B6DF93819AB3513369ADE6B"
+    },
+    {
+      "asset": "/Game/Blueprints/Weapons/MSL/NPC/Sasm/BP_wp_sasm_r0",
+      "payloadSha256": "8BD83C48ABCD24004E60F16C7D7E222FDC66A20A84C3812CE84078CD3B8C1A0F"
+    },
+    {
+      "asset": "/Game/Datatables/PLAYER/DT_WeaponSettings",
+      "payloadSha256": "A0CDF379084A35AE1D9C67D7B04939D9930361A64EB13158DD238EC7B26F6791"
+    },
+    {
+      "asset": "/Game/Datatables/AI/NPC/Weapon/DT_NPC_Weapon",
+      "payloadSha256": "5394580C4FE2B7EB12F82EC83C9605470F9494E7254C02FBFA653BE7240CF7DF"
+    }
+  ]
+}
