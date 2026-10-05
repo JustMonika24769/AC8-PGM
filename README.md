@@ -124,10 +124,17 @@ UE4SS 原生加载器与 Easy Anti-Cheat（EAC）不应在同一进程中运行�
 
 数值为当前发布包内置的制导参数。
 
-| 阵营 | 1.00 | 0.95 | 0.90 | 0.85 | 0.80 | 0.75 | 0.30 | 0.25 | 0.20 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 玩家 | QAAM | SAAM, 2AAM | LAAM, SASM, 4AAM, 6AAM | HVAA | HCAA, MSL | HPAA | - | - | - |
-| 敌方 | - | - | - | - | - | - | QAAM, SAAM, LAAM, 2AAM | MSL, 4AAM, 6AAM, 8AAM, HCAA, HVAA, SASM | HPAA |
+| 阵营 | 参数值 | 导弹 |
+| --- | ---: | --- |
+| 玩家 | 1.00 | QAAM |
+| 玩家 | 0.95 | SAAM, 2AAM |
+| 玩家 | 0.90 | LAAM, SASM, 4AAM, 6AAM |
+| 玩家 | 0.85 | HVAA |
+| 玩家 | 0.80 | HCAA, MSL |
+| 玩家 | 0.75 | HPAA |
+| 敌方 | 0.30 | QAAM, SAAM, LAAM, 2AAM |
+| 敌方 | 0.25 | MSL, 4AAM, 6AAM, 8AAM, HCAA, HVAA, SASM |
+| 敌方 | 0.20 | HPAA |
 
 ## 自定义参数
 

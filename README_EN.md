@@ -124,10 +124,17 @@ If offline mode was enabled, also run `DisableOffline.cmd` and remove the offlin
 
 The values below are built into the current release.
 
-| Side | 1.00 | 0.95 | 0.90 | 0.85 | 0.80 | 0.75 | 0.30 | 0.25 | 0.20 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Player | QAAM | SAAM, 2AAM | LAAM, SASM, 4AAM, 6AAM | HVAA | HCAA, MSL | HPAA | - | - | - |
-| Enemy | - | - | - | - | - | - | QAAM, SAAM, LAAM, 2AAM | MSL, 4AAM, 6AAM, 8AAM, HCAA, HVAA, SASM | HPAA |
+| Side | Value | Missiles |
+| --- | ---: | --- |
+| Player | 1.00 | QAAM |
+| Player | 0.95 | SAAM, 2AAM |
+| Player | 0.90 | LAAM, SASM, 4AAM, 6AAM |
+| Player | 0.85 | HVAA |
+| Player | 0.80 | HCAA, MSL |
+| Player | 0.75 | HPAA |
+| Enemy | 0.30 | QAAM, SAAM, LAAM, 2AAM |
+| Enemy | 0.25 | MSL, 4AAM, 6AAM, 8AAM, HCAA, HVAA, SASM |
+| Enemy | 0.20 | HPAA |
 
 ## Customize parameters
 
