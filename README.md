@@ -1,9 +1,14 @@
+<div align="center">
+
 # AC8 PGM
 
-> **版本 1.0.0** | 适配 ACE COMBAT 8 `1.1.2.0` | 仅限离线单人战役
+适用于ACE COMBAT 8 的导弹资源覆盖模组
+
+版本 `1.0.0` · 游戏版本 `1.1.2.0` · Unreal Engine `5.4` · 仅限离线单人战役
 
 [简体中文](README.md) | [English](README_EN.md)
 
+</div>
 `AC8 PGM`（Proportional Guided Missile，比例制导导弹）是 ACE COMBAT 8 的资源覆盖模组。它直接覆盖武器蓝图与数据表，不使用 UObject 轮询逻辑，也不会把资源写回游戏原始的 `pakchunk0-Windows.*`。
 
 ## 目录
