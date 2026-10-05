@@ -100,6 +100,45 @@ HVAA 0.85、HCAA/MSL 0.80、HPAA 0.75。
 敌方：QAAM/SAAM/LAAM/2AAM 0.30、MSL/4AAM/6AAM/8AAM/HCAA/HVAA/SASM
 0.25、HPAA 0.20。
 
+## 可选参数自定义工具
+
+用户包内的 `tools\AC8PGMCustomizer-v1.0.0.zip` 是可选的自定义工具。它可以读取
+`config.json` 中的玩家和敌方导弹参数，重新生成并验证本模组所需的
+`AC8PGMDirect_P.utoc/.ucas/.pak/.build.json`。工具是自包含程序，不需要另外安装 .NET。
+
+使用步骤：
+
+1. 先按上文安装基础 AC8 PGM，并确认默认配置能够在离线战役中生效。
+2. 退出游戏，将 `tools\AC8PGMCustomizer-v1.0.0.zip` 完整解压到一个单独目录。
+   不要直接在压缩包里运行，也不要只取出 EXE；程序需要同目录下的 `data` 文件夹。
+3. 用文本编辑器打开工具目录中的 `config.json`，修改 `player` 和 `enemy` 下需要调整的值。
+   数值必须是 `0` 到 `10` 的有限数字；删除某一项会保留模板默认值。
+4. 在工具目录打开 PowerShell 或命令提示符，先检查配置：
+
+   ```text
+   AC8PGMCustomizer.exe check
+   ```
+
+5. 基础模组已经安装时，运行以下命令。程序会生成、回读验证并安装四个覆盖资源：
+
+```text
+AC8PGMCustomizer.exe install
+```
+
+只想生成文件而暂时不安装时，改用：
+
+```text
+AC8PGMCustomizer.exe generate
+```
+
+生成结果位于工具目录的 `output` 文件夹。修改参数后需要重新运行 `install` 才会更新游戏中
+实际加载的资源。要恢复本用户包提供的默认参数，请退出游戏后重新运行顶层的 `Install.cmd`。
+
+自定义工具不会修改游戏原始 `pakchunk0-Windows.*`，但生成的资源仍然依赖基础模组的
+UE4SS IoStore 加载器。它同样只允许用于游戏 `1.1.2.0` 的离线单人战役，不得用于多人、
+联网活动或排行榜。更详细的参数与排错说明位于工具压缩包内的 `README.md`；开发实现和
+构建说明位于 Developer 包文档。
+
 ## 排错
 
 运行日志：
