@@ -109,11 +109,11 @@ function Get-SHA256 {
 
 function Test-Payload {
     $expected = [ordered]@{
-        'payload\AC8PGMDirect\AC8PGMDirect_P.build.json' = '3a156ab2558c6e23da301155c112f6e8366d8f987e87b55950a3adf78b356320'
-        'payload\AC8PGMDirect\AC8PGMDirect_P.pak' = '75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd'
-        'payload\AC8PGMDirect\AC8PGMDirect_P.ucas' = '7b3a4cf4b3329e889caf25b079362e69c653dfe8023646de6c1a21f7e177bcac'
-        'payload\AC8PGMDirect\AC8PGMDirect_P.utoc' = 'c3ed7a693ec74923c8785f36a548bd7557815496e91fdfe7e4c470fbab61958e'
-        'payload\dlls\main.dll' = 'b6c1a8678736628404d9f81a4ad65952aaab071d35f823b29d6e51fd4cb53785'
+        'payload\AC8OverrideLoader\payloads\AC8PGMDirect\AC8PGMDirect_P.build.json' = '3a156ab2558c6e23da301155c112f6e8366d8f987e87b55950a3adf78b356320'
+        'payload\AC8OverrideLoader\payloads\AC8PGMDirect\AC8PGMDirect_P.pak' = '75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd'
+        'payload\AC8OverrideLoader\payloads\AC8PGMDirect\AC8PGMDirect_P.ucas' = '7b3a4cf4b3329e889caf25b079362e69c653dfe8023646de6c1a21f7e177bcac'
+        'payload\AC8OverrideLoader\payloads\AC8PGMDirect\AC8PGMDirect_P.utoc' = 'c3ed7a693ec74923c8785f36a548bd7557815496e91fdfe7e4c470fbab61958e'
+        'payload\AC8OverrideLoader\dlls\main.dll' = '225c8d6c3fbf5e8882cb8e334dbd3426cb24a1415b3585073cc4264ae834f851'
     }
     foreach ($relative in $expected.Keys) {
         $path = Join-Path $PSScriptRoot $relative
@@ -137,24 +137,42 @@ try {
         throw "The UE4SS Mods directory was not found: $mods. Install a compatible UE4SS first."
     }
 
-    $loader = Join-Path $mods 'IoStoreLoaderMod'
-    $container = Join-Path $loader 'AC8PGMDirect'
+    $loader = Join-Path $mods 'AC8OverrideLoader'
+    $container = Join-Path $loader 'payloads\AC8PGMDirect'
     foreach ($name in @(
         'AC8PGMDirect_P.utoc',
         'AC8PGMDirect_P.ucas',
         'AC8PGMDirect_P.pak',
         'AC8PGMDirect_P.build.json'
     )) {
-        Copy-Atomic (Join-Path $PSScriptRoot "payload\AC8PGMDirect\$name") (Join-Path $container $name)
+        Copy-Atomic (Join-Path $PSScriptRoot "payload\AC8OverrideLoader\payloads\AC8PGMDirect\$name") (Join-Path $container $name)
     }
-    Copy-Atomic (Join-Path $PSScriptRoot 'payload\dlls\main.dll') (Join-Path $loader 'dlls\main.dll')
+    Copy-Atomic (Join-Path $PSScriptRoot 'payload\AC8OverrideLoader\dlls\main.dll') (Join-Path $loader 'dlls\main.dll')
+
+    # Remove only the legacy AC8PGM payload. Leave the old loader files in place
+    # in case the user wants to inspect or restore them, but disable its hook.
+    $legacyContainer = Join-Path $mods 'IoStoreLoaderMod\AC8PGMDirect'
+    foreach ($name in @(
+        'AC8PGMDirect_P.utoc',
+        'AC8PGMDirect_P.ucas',
+        'AC8PGMDirect_P.pak',
+        'AC8PGMDirect_P.build.json'
+    )) {
+        $legacyPath = Join-Path $legacyContainer $name
+        if (Test-Path -LiteralPath $legacyPath) { Remove-Item -LiteralPath $legacyPath -Force }
+    }
+    if ((Test-Path -LiteralPath $legacyContainer) -and
+        -not (Get-ChildItem -LiteralPath $legacyContainer -Force)) {
+        Remove-Item -LiteralPath $legacyContainer -Force
+    }
 
     $modsFile = Join-Path $mods 'mods.txt'
-    Set-ModState $modsFile 'IoStoreLoaderMod' 1
+    Set-ModState $modsFile 'IoStoreLoaderMod' 0
+    Set-ModState $modsFile 'AC8OverrideLoader' 1
     Set-ModState $modsFile 'AC8AssetMappingDumper' 0
 
     Write-Host "Installed successfully: $game" -ForegroundColor Green
-    Write-Host 'IoStoreLoaderMod is enabled. Display name: AC8 PGM.'
+    Write-Host 'AC8OverrideLoader is enabled and the legacy IoStoreLoaderMod is disabled.'
     exit 0
 } catch {
     Write-Error $_.Exception.Message

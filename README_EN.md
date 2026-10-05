@@ -1,10 +1,18 @@
+<div align="center">
+
 # AC8 PGM
 
-> **Version 1.0.0** | For ACE COMBAT 8 `1.1.2.0` | Offline campaign only
+A proportional-guidance missile resource override mod for ACE COMBAT 8
+
+Version `1.0.0` · Game version `1.1.2.0` · Unreal Engine `5.4` · Offline campaign only
 
 [简体中文](README.md) | [English](README_EN.md)
 
-`AC8 PGM` (Proportional Guided Missile) is a resource override mod for ACE COMBAT 8. It directly overrides weapon blueprints and data tables without UObject polling, and it never writes resources back to the game's original `pakchunk0-Windows.*` files.
+</div>
+
+`AC8 PGM` (Proportional Guided Missile) directly overrides weapon blueprints and data tables without UObject polling. It never writes to the game's original `pakchunk0-Windows.*` files.
+
+This release uses the shared `AC8OverrideLoader`. The legacy `IoStoreLoaderMod` is disabled, and the installer migrates and removes its AC8 PGM-specific legacy payload.
 
 ## Contents
 
@@ -12,7 +20,7 @@
 - [Install UE4SS](#install-ue4ss)
 - [Install the mod](#install-the-mod)
 - [Offline mode and EAC](#offline-mode-and-eac)
-- [Supported use](#supported-use)
+- [How it works and supported use](#how-it-works-and-supported-use)
 - [Uninstall](#uninstall)
 - [Default tuning](#default-tuning)
 - [Customize parameters](#customize-parameters)
@@ -23,6 +31,7 @@
 | Component | Requirement |
 | --- | --- |
 | Game | ACE COMBAT 8 `1.1.2.0` (verified on 2026-10-04) |
+| Engine version | Unreal Engine `5.4` |
 | Mod loader | UE4SS `3.0.1 Beta #0` (commit `e3ba1016`) |
 | System tool | Windows PowerShell 5.1 or PowerShell 7 |
 
@@ -54,7 +63,13 @@
    .\Install.ps1 -GamePath "D:\SteamLibrary\steamapps\common\ACE COMBAT 8"
    ```
 
-The installer only adds or updates this mod's entry in `mods.txt`; it does not overwrite other mod settings. Use the original uninstaller when removing another proportional-guidance mod, and do not mix files from different releases.
+The installer only adds or updates this mod's entry in `mods.txt`; it does not overwrite other mod settings. During installation, it also:
+
+- enables `AC8OverrideLoader`;
+- disables the legacy `IoStoreLoaderMod`; and
+- removes the AC8 PGM-specific legacy payload from the old loader directory.
+
+Use the original uninstaller when removing another proportional-guidance mod, and do not mix files from different releases.
 
 Before installation, confirm that:
 
@@ -100,7 +115,7 @@ Additional restrictions:
 
 This method only selects the EAC null client for the current offline process. It does not delete, replace, or modify any EAC binary, and it is not suitable for online services.
 
-## Supported use
+## How it works and supported use
 
 Modified resources are stored in a separate IoStore override container. At game startup, UE4SS loads an AC8-specific native mounter so that the game reads this container at a higher priority.
 
@@ -116,7 +131,9 @@ This mod has not been tested for compatibility with multiplayer, anti-cheat envi
 
 ## Uninstall
 
-Exit the game, then double-click `Uninstall.cmd`. The uninstaller removes only the containers and loader installed by this release. It does not modify the game's original `pakchunk` files.
+Exit the game, then double-click `Uninstall.cmd`. The uninstaller removes only the AC8 PGM override resources installed by this release. It does not modify the game's original `pakchunk` files.
+
+If `AC8OverrideLoader` still hosts other override containers, the uninstaller leaves it installed and enabled. If no other containers remain, it removes the loader files and disables the corresponding `mods.txt` entry.
 
 If offline mode was enabled, also run `DisableOffline.cmd` and remove the offline launch option from Steam.
 
@@ -144,6 +161,12 @@ The values below are built into the current release.
 - `AC8PGMDirect_P.ucas`
 - `AC8PGMDirect_P.pak`
 - `AC8PGMDirect_P.build.json`
+
+The generated resources are installed to:
+
+```text
+Game\Binaries\Win64\ue4ss\Mods\AC8OverrideLoader\payloads\AC8PGMDirect
+```
 
 The utility is self-contained and does not require a separate .NET installation.
 
@@ -181,7 +204,7 @@ More detailed parameter and troubleshooting information is available in the `REA
 The runtime log is located at:
 
 ```text
-Game\Binaries\Win64\ue4ss\Mods\IoStoreLoaderMod\AC8IoStoreLoader.log
+Game\Binaries\Win64\ue4ss\Mods\AC8OverrideLoader\AC8OverrideLoader.log
 ```
 
 A successful log should contain:
@@ -198,9 +221,9 @@ If the game behaves unexpectedly after startup:
 2. For an emergency disable, you can also add the following line to `ue4ss\Mods\mods.txt`:
 
    ```text
-   IoStoreLoaderMod : 0
+   AC8OverrideLoader : 0
    ```
 
 The mod does not alter the original game containers, but it may still conflict with other UE4SS mods or future game updates.
 
-Technical notes and source code are provided in the separate Developer archive. The underlying UE4SS entry remains named `IoStoreLoaderMod`; this is the loader module name, not the mod's display name.
+Technical notes and source code are provided in the separate Developer archive. The underlying UE4SS entry is now named `AC8OverrideLoader`; this is the loader module name, not the mod's display name.

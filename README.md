@@ -2,14 +2,17 @@
 
 # AC8 PGM
 
-适用于ACE COMBAT 8 的导弹资源覆盖模组
+面向 ACE COMBAT 8 的比例制导导弹资源覆盖模组
 
 版本 `1.0.0` · 游戏版本 `1.1.2.0` · Unreal Engine `5.4` · 仅限离线单人战役
 
 [简体中文](README.md) | [English](README_EN.md)
 
 </div>
-`AC8 PGM`（Proportional Guided Missile，比例制导导弹）是 ACE COMBAT 8 的资源覆盖模组。它直接覆盖武器蓝图与数据表，不使用 UObject 轮询逻辑，也不会把资源写回游戏原始的 `pakchunk0-Windows.*`。
+
+`AC8 PGM`（Proportional Guided Missile，比例制导导弹）直接覆盖武器蓝图与数据表，不使用 UObject 轮询逻辑，也不会改写游戏原始的 `pakchunk0-Windows.*`。
+
+当前版本使用通用加载器 `AC8OverrideLoader`。旧版 `IoStoreLoaderMod` 已停用，安装程序会迁移并清理仅属于 AC8 PGM 的旧载荷。
 
 ## 目录
 
@@ -17,7 +20,7 @@
 - [安装 UE4SS](#安装-ue4ss)
 - [安装模组](#安装模组)
 - [离线模式与 EAC](#离线模式与-eac)
-- [使用范围](#使用范围)
+- [运行方式与使用范围](#运行方式与使用范围)
 - [卸载](#卸载)
 - [默认参数](#默认参数)
 - [自定义参数](#自定义参数)
@@ -28,6 +31,7 @@
 | 组件 | 要求 |
 | --- | --- |
 | 游戏 | ACE COMBAT 8 `1.1.2.0`（2026-10-04 验证） |
+| 引擎版本 | Unreal Engine `5.4` |
 | 模组加载器 | UE4SS `3.0.1 Beta #0`（提交 `e3ba1016`） |
 | 系统工具 | Windows PowerShell 5.1 或 PowerShell 7 |
 
@@ -35,7 +39,7 @@
 
 1. 从 UE4SS 官方发布页取得与 UE5.4 x64 兼容的 `3.0.1 Beta #0`（提交 `e3ba1016`）压缩包。不要混用其他游戏的 UE4SS 文件或未知 nightly 版本。
 2. 退出游戏，并备份 `Game\Binaries\Win64` 下现有的 UE4SS 文件和 `ue4ss\Mods` 目录。
-3. 按压缩包原有的目录结构，将内容解压到：
+3. 保持 UE4SS 压缩包原有的目录结构，将内容解压到：
 
    ```text
    ACE COMBAT 8\Game\Binaries\Win64\
@@ -59,7 +63,13 @@
    .\Install.ps1 -GamePath "D:\SteamLibrary\steamapps\common\ACE COMBAT 8"
    ```
 
-安装器只会增改 `mods.txt` 中属于本模组的条目，不会覆盖其他模组的配置。卸载其他比例制导模组时，请使用其自带的卸载程序，不要混装新旧模组文件。
+安装器只会增改 `mods.txt` 中属于本模组的条目，不会覆盖其他模组的配置。安装时，它还会：
+
+- 启用 `AC8OverrideLoader`；
+- 停用旧版 `IoStoreLoaderMod`；
+- 清理旧加载器目录中仅属于 AC8 PGM 的旧载荷。
+
+卸载其他比例制导模组时，请使用其自带的卸载程序，不要混装新旧模组文件。
 
 安装前请再次确认：
 
@@ -105,7 +115,7 @@ UE4SS 原生加载器与 Easy Anti-Cheat（EAC）不应在同一进程中运行�
 
 这种方式只让本次离线进程使用 EAC 空客户端，不会删除、替换或修改 EAC 二进制文件，也不适用于任何在线服务。
 
-## 使用范围
+## 运行方式与使用范围
 
 修改后的资源保存在独立的 IoStore 覆盖容器中。UE4SS 负责在游戏启动时加载 AC8 专用原生挂载器，使游戏优先读取该容器。
 
@@ -121,13 +131,15 @@ UE4SS 原生加载器与 Easy Anti-Cheat（EAC）不应在同一进程中运行�
 
 ## 卸载
 
-退出游戏后，双击 `Uninstall.cmd`。卸载器只删除本发布包安装的容器和加载器，不会修改游戏原始的 `pakchunk`。
+退出游戏后，双击 `Uninstall.cmd`。卸载器只清理本发布包安装的 AC8 PGM 覆盖资源，不会修改游戏原始的 `pakchunk`。
+
+如果 `AC8OverrideLoader` 还承载其他覆盖容器，卸载器会保留并继续启用它；没有其他容器时，卸载器会移除加载器文件并停用对应的 `mods.txt` 条目。
 
 如果此前启用了离线模式，还应运行 `DisableOffline.cmd`，并删除 Steam 中的离线启动选项。
 
 ## 默认参数
 
-数值为当前发布包内置的制导参数。
+下列制导参数内置于当前发布包。
 
 | 阵营 | 参数值 | 导弹 |
 | --- | ---: | --- |
@@ -149,6 +161,12 @@ UE4SS 原生加载器与 Easy Anti-Cheat（EAC）不应在同一进程中运行�
 - `AC8PGMDirect_P.ucas`
 - `AC8PGMDirect_P.pak`
 - `AC8PGMDirect_P.build.json`
+
+生成的资源会安装到：
+
+```text
+Game\Binaries\Win64\ue4ss\Mods\AC8OverrideLoader\payloads\AC8PGMDirect
+```
 
 该工具是自包含程序，无需另外安装 .NET。
 
@@ -186,7 +204,7 @@ UE4SS 原生加载器与 Easy Anti-Cheat（EAC）不应在同一进程中运行�
 运行日志位于：
 
 ```text
-Game\Binaries\Win64\ue4ss\Mods\IoStoreLoaderMod\AC8IoStoreLoader.log
+Game\Binaries\Win64\ue4ss\Mods\AC8OverrideLoader\AC8OverrideLoader.log
 ```
 
 正常日志应包含：
@@ -203,9 +221,9 @@ custom mount code=0 message=OK
 2. 如需紧急停用，也可以将以下内容写入 `ue4ss\Mods\mods.txt`：
 
    ```text
-   IoStoreLoaderMod : 0
+   AC8OverrideLoader : 0
    ```
 
 本模组不修改原始游戏容器，但仍可能与其他 UE4SS 模组或未来的游戏更新发生冲突。
 
-技术说明和源码位于单独的 Developer 压缩包中。底层 UE4SS 加载器条目仍名为 `IoStoreLoaderMod`；这是加载器模块名，不是模组展示名。
+技术说明和源码位于单独的 Developer 压缩包中。底层 UE4SS 加载器条目现名为 `AC8OverrideLoader`；这是加载器模块名，不是模组展示名。

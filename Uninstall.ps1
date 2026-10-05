@@ -67,8 +67,9 @@ try {
     }
     $game = Find-GamePath $GamePath
     $mods = Join-Path $game 'Game\Binaries\Win64\ue4ss\Mods'
-    $loader = Join-Path $mods 'IoStoreLoaderMod'
-    $container = Join-Path $loader 'AC8PGMDirect'
+    $loader = Join-Path $mods 'AC8OverrideLoader'
+    $payloadRoot = Join-Path $loader 'payloads'
+    $container = Join-Path $payloadRoot 'AC8PGMDirect'
 
     foreach ($name in @(
         'AC8PGMDirect_P.utoc',
@@ -79,15 +80,46 @@ try {
         $path = Join-Path $container $name
         if (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path -Force }
     }
-    foreach ($path in @(
-        (Join-Path $loader 'dlls\main.dll'),
-        (Join-Path $loader 'AC8IoStoreLoader.log')
-    )) {
-        if (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path -Force }
+    if ((Test-Path -LiteralPath $container) -and
+        -not (Get-ChildItem -LiteralPath $container -Force)) {
+        Remove-Item -LiteralPath $container -Force
     }
-    Set-ModState (Join-Path $mods 'mods.txt') 'IoStoreLoaderMod' 0
 
-    foreach ($directory in @($container, (Join-Path $loader 'dlls'), $loader)) {
+    $otherContainers = @()
+    if (Test-Path -LiteralPath $payloadRoot) {
+        $otherContainers = @(Get-ChildItem -LiteralPath $payloadRoot -Recurse -File -Filter '*.utoc')
+    }
+    if ($otherContainers.Count -eq 0) {
+        foreach ($path in @(
+            (Join-Path $loader 'dlls\main.dll'),
+            (Join-Path $loader 'AC8OverrideLoader.log')
+        )) {
+            if (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path -Force }
+        }
+        Set-ModState (Join-Path $mods 'mods.txt') 'AC8OverrideLoader' 0
+    } else {
+        Write-Host "AC8OverrideLoader remains enabled for $($otherContainers.Count) other container(s)."
+    }
+
+    # Also remove a legacy AC8PGM payload left by releases before this migration.
+    $legacyContainer = Join-Path $mods 'IoStoreLoaderMod\AC8PGMDirect'
+    foreach ($name in @(
+        'AC8PGMDirect_P.utoc',
+        'AC8PGMDirect_P.ucas',
+        'AC8PGMDirect_P.pak',
+        'AC8PGMDirect_P.build.json'
+    )) {
+        $legacyPath = Join-Path $legacyContainer $name
+        if (Test-Path -LiteralPath $legacyPath) { Remove-Item -LiteralPath $legacyPath -Force }
+    }
+
+    foreach ($directory in @(
+        $legacyContainer,
+        $container,
+        $payloadRoot,
+        (Join-Path $loader 'dlls'),
+        $loader
+    )) {
         if ((Test-Path -LiteralPath $directory) -and -not (Get-ChildItem -LiteralPath $directory -Force)) {
             Remove-Item -LiteralPath $directory -Force
         }
